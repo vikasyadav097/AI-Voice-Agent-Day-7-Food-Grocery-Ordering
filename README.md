@@ -1,39 +1,54 @@
-# Murf AI Voice Agents Challenge - Day 3 Complete ⚡
+# Murf AI Voice Agents Challenge - Day 4 Complete ⚡
 
-Welcome to my **Murf AI Voice Agents Challenge** Day 3 submission!
+Welcome to my **Murf AI Voice Agents Challenge** Day 4 submission!
 
-This repository contains my implementation of the **Health & Wellness Voice Companion** - a supportive daily check-in agent with JSON persistence.
+This repository contains my implementation of the **Teach-the-Tutor: Active Recall Coach** - an interactive learning agent with three distinct modes and voice handoffs.
 
 ## 🎯 Challenge Task
 
-**Day 3 Objective**: Build a health and wellness voice companion that conducts daily check-ins and stores data in JSON.
+**Day 4 Objective**: Build a "Teach-the-Tutor" experience with three learning modes using agent handoffs.
 
 ### Primary Goal ✅
-- Clear, grounded system prompt for wellness companion
-- Daily check-ins via voice about mood, energy, and goals
-- JSON file persistence for all check-ins
-- Reference past data in new conversations
+- Three distinct learning modes with different voices
+- Content-driven learning from JSON file
+- Seamless agent handoffs between modes
+- User can switch modes at any time
 
 ### What I Built:
 
-✅ Supportive, non-medical wellness companion
-✅ Daily check-in conversation flow:
-  - Mood assessment
-  - Energy level check
-  - Stress/concerns inquiry
-  - 1-3 daily objectives/intentions
-  - Simple, actionable advice
-  - Recap and confirmation
-✅ JSON-based persistence (`wellness_log.json`)
-✅ Previous check-in context loading
-✅ Natural reference to past sessions
-✅ 5 function tools for data collection:
-  - `set_mood()` - Record current mood
-  - `set_energy()` - Record energy level
-  - `set_stress()` - Note stress/concerns
-  - `add_objective()` - Add daily goals
-  - `add_note()` - Additional reflections
-  - `complete_checkin()` - Save to JSON log
+✅ **Greeter Agent** - Initial routing agent (Voice: Matthew)
+  - Welcomes students
+  - Explains available learning modes
+  - Routes to appropriate mode using `switch_mode` tool
+
+✅ **Learn Mode Agent** - Explains concepts (Voice: Matthew)
+  - Retrieves concepts from JSON content file
+  - Explains programming concepts clearly
+  - Uses analogies and examples
+  - Offers mode switching
+
+✅ **Quiz Mode Agent** - Tests knowledge (Voice: Alicia)
+  - Asks questions from content file
+  - Provides encouraging feedback
+  - Corrects misconceptions gently
+  - Fun, low-pressure atmosphere
+
+✅ **Teach Back Mode Agent** - Student teaches (Voice: Ken)
+  - Prompts student to explain concepts
+  - Active listening and follow-up questions
+  - Qualitative feedback system
+  - Focus on what student got right
+
+✅ **Content File System**:
+  - 5 programming concepts (Variables, Loops, Functions, Conditionals, Arrays)
+  - Each with summary and sample questions
+  - Shared across all learning modes
+
+✅ **Agent Handoff Features**:
+  - Seamless transitions between modes
+  - Different Murf Falcon voices per mode
+  - Context preservation during switches
+  - User-initiated mode changes
 
 ### What I Accomplished:
 
@@ -142,8 +157,8 @@ Make sure you have the following installed:
 ### 1. Clone This Repository
 
 ```bash
-git clone https://github.com/GhanshyamJha05/Day3_Wellness_Companion_MurfAI.git
-cd Day3_Wellness_Companion_MurfAI
+git clone https://github.com/GhanshyamJha05/Fourth_day_task_murf_ai.git
+cd Fourth_day_task_murf_ai
 ```
 
 ### 2. Backend Setup
